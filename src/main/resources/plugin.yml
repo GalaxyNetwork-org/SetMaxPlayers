@@ -4,6 +4,7 @@ authors: ["Lncvrt"]
 description: Set the max amount of players on a server, without restarting it!
 main: xyz.lncvrt.setmaxplayers.SetMaxPlayers
 api-version: '1.20'
+folia-supported: true
 commands:
   setmaxplayers:
     description: The command to set the max amount of players that can join the server
