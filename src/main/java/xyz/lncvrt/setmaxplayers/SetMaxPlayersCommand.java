@@ -23,6 +23,10 @@ public class SetMaxPlayersCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+        if (!commandSender.hasPermission(plugin.config.getString("permission", "lncvrt.setmaxplayers.use"))) {
+            commandSender.sendMessage(ChatColor.RED + "You don't have permission!");
+            return true;
+        }
         if (strings.length != 1) {
             commandSender.sendMessage(ChatColor.RED + "Correct usage: /setmaxplayers <amount>");
             return true;
